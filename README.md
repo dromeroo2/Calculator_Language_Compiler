@@ -1,6 +1,8 @@
 # 🧮 Compilador de Lenguaje tipo Calculadora
 
-![Calculadora](images/calculadora.png)
+<div align="center">
+  <img src="images/calculadora.png" width="500">
+</div>
 
 ## 📖 Descripción del Proyecto
 Este proyecto consiste en el diseño e implementación de un sistema completo de compilación, abarcando desde el análisis léxico hasta la ejecución del código generado. El compilador reconoce un lenguaje de programación diseñado para funcionar como una calculadora avanzada, capaz de evaluar expresiones, manejar variables y ejecutar estructuras de control.
@@ -50,3 +52,7 @@ El lenguaje incluye sentencias terminadas en `;`, soporte para asignaciones (`=`
 **Mejoras Adicionales Implementadas:**
 *   **Bucle FOR:** Se añadió la estructura `FOR variable = inicio TO fin DO Begin <...> End;` con auto-incremento de +1 en cada ciclo.
 *   **Comentarios:** Se incluyó el token `//` en el analizador léxico para permitir comentarios de una línea, los cuales son ignorados durante la compilación.
+
+<div align="center">
+  <img src="images/ast.png" width="500">
+</div>
