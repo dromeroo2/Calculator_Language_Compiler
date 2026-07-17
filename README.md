@@ -1,20 +1,20 @@
-# 🧮 Compilador de Lenguaje tipo Calculadora
+# Compilador de Lenguaje tipo Calculadora
 
 <div align="center">
   <img src="images/calculadora.png" width="500">
 </div>
 
-## 📖 Descripción del Proyecto
+## Descripción del Proyecto
 Este proyecto consiste en el diseño e implementación de un sistema completo de compilación, abarcando desde el análisis léxico hasta la ejecución del código generado. El compilador reconoce un lenguaje de programación diseñado para funcionar como una calculadora avanzada, capaz de evaluar expresiones, manejar variables y ejecutar estructuras de control.
 
-## 🛠️ Herramientas y Tecnologías
+## Herramientas y Tecnologías
 El compilador ha sido desarrollado utilizando las siguientes herramientas:
 *   **Java**: Lenguaje principal de desarrollo.
 *   **ANTLR**: Utilizado a través del plugin de ``IntelliJ`` para la generación automática de los analizadores léxico y sintáctico.
 *   **Jasmin**: Lenguaje ensamblador utilizado para la generación e interpretación del código intermedio dirigido a la Máquina Virtual de Java (``JVM``).
 *   **Eclipse IDE**: Entorno utilizado para la elaboración del programa principal y la clase `MiVisitor`.
 
-## ⚙️ Fases del Compilador
+## Fases del Compilador
 
 ### 1. Analizador Léxico
 Divide el código fuente en tokens o unidades mínimas de información mediante un archivo `.g4` procesado por ``ANTLR``.
@@ -39,7 +39,7 @@ Traduce el ``AST`` a código intermedio utilizando instrucciones del lenguaje ``
 *   Los números son tratados por defecto como formato `double` para unificar las operaciones.
 *   Emplea instrucciones especiales como `invokestatic` para llamadas a funciones matemáticas predefinidas (`Math.sqrt`, `Math.pow`) o funciones de usuario.
 
-## 🚀 Características del Lenguaje y Mejoras
+## Características del Lenguaje y Mejoras
 El lenguaje incluye sentencias terminadas en `;`, soporte para asignaciones (`=`), y operadores aritméticos (`+`, `-`, `*`, `/`, `%`, `SQRT`, `^`) y lógicos (`<`, `>`, `=`).
 
 **Estructuras Base:**
@@ -48,10 +48,8 @@ El lenguaje incluye sentencias terminadas en `;`, soporte para asignaciones (`=`
 *   Bucles: `While (condición) <...> EndWhile;` 
 *   Funciones: `Func nombre(args) <...> End Func;` y `Return <...>;` 
 *   Impresión en consola: `Print <...>;` 
-
-**Mejoras Adicionales Implementadas:**
-*   **Bucle FOR:** Se añadió la estructura `FOR variable = inicio TO fin DO Begin <...> End;` con auto-incremento de +1 en cada ciclo.
-*   **Comentarios:** Se incluyó el token `//` en el analizador léxico para permitir comentarios de una línea, los cuales son ignorados durante la compilación.
+*   **Bucle FOR:** Estructura `FOR variable = inicio TO fin DO Begin <...> End;` con auto-incremento de +1 en cada ciclo.
+*   **Comentarios:** Token `//` en el analizador léxico para permitir comentarios de una línea, los cuales son ignorados durante la compilación.
 
 <div align="center">
   <img src="images/ast.png" width="500">
